@@ -1,0 +1,34 @@
+# Development overrides automatically merged by Docker Compose when present.
+# Hot reload, debug mode, source mount.
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+      target: builder  # Reuse the named base stage.
+    volumes:
+      # Mount source for hot reload without rebuilding.
+      - ./app:/app/app:cached
+    environment:
+      DEBUG: "true"
+      LOG_LEVEL: DEBUG
+    command:
+      - uvicorn
+      - app.main:app
+      - --host
+      - "0.0.0.0"
+      - --port
+      - "8000"
+      - --reload
+      - --reload-dir
+      - /app/app
+      - --log-level
+      - debug
+
+  worker:
+    volumes:
+      - ./app:/app/app:cached
+    environment:
+      DEBUG: "true"
+      LOG_LEVEL: DEBUG

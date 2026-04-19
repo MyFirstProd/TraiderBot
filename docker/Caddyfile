@@ -1,0 +1,21 @@
+{
+    auto_https disable_redirects
+}
+
+http://localhost {
+    redir https://localhost{uri} 308
+}
+
+http://miniapp.localhost {
+    redir https://miniapp.localhost{uri} 308
+}
+
+https://localhost {
+    tls internal
+    reverse_proxy app:8000
+}
+
+https://miniapp.localhost {
+    tls internal
+    reverse_proxy app:8000
+}

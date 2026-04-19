@@ -1,0 +1,114 @@
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+MANIFEST
+
+# ── Virtual environments ──────────────────────────────────────────────────────
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# ── Distribution / packaging ──────────────────────────────────────────────────
+.Python
+develop-eggs/
+lib/
+lib64/
+.installed.cfg
+
+# ── Unit test / coverage ──────────────────────────────────────────────────────
+.pytest_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+*.cover
+nosetests.xml
+test-results/
+
+# ── Type checkers ─────────────────────────────────────────────────────────────
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pytype/
+
+# ── Linter / formatter caches ─────────────────────────────────────────────────
+.ruff_cache/
+
+# ── Secrets / credentials — NEVER commit these ───────────────────────────────
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+*.p12
+*.pfx
+secrets/
+
+# ── IDEs ──────────────────────────────────────────────────────────────────────
+.idea/
+.vscode/
+*.iml
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# ── OS ────────────────────────────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ── Docker ────────────────────────────────────────────────────────────────────
+# Keep docker-compose files tracked; ignore local overrides not in repo
+docker-compose.local.yml
+
+# ── Alembic generated ────────────────────────────────────────────────────────
+# Keep alembic/ tracked; ignore transient artefacts
+alembic/__pycache__/
+
+# ── Logs ──────────────────────────────────────────────────────────────────────
+*.log
+logs/
+
+# ── Jupyter ───────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+# ── Misc ──────────────────────────────────────────────────────────────────────
+*.bak
+*.tmp
+.hypothesis/
+
+# Cloudflare & Ngrok
+cloudflared.exe
+cloudflared.log
+ngrok.exe
+ngrok.log
+ngrok_output.txt
+
+# Local runtime
+local_runtime.db
